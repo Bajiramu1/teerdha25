@@ -10,17 +10,17 @@ body {
 }
 
 .jk {
-    width: calc(100% - 250px) !important;
+    width: calc(100%) !important;
     align-items: first baseline;
 }
 
 /* Heading styling */
 .sr {
-    margin-left: 340px; 
+    /* margin-left: 340px;  */
     font-size: 32px; 
     color: black; 
     font-weight: bold;
-    margin-top: 380px;
+    /* margin-top: 380px; */
  
 }
 
@@ -80,7 +80,7 @@ body.dark .vk {
 
 /* Table styling */
 table {
-    width: 75%;
+    width: 100%;
     background: #fff;
     border-radius: 10px;
     margin: 20px 0px;

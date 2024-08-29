@@ -77,7 +77,8 @@ def faq_home(request):
         k3 = flightfaqs.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"flight_templates/flightfaq_table.html",{'k3': k3,'Sidebar':Sidebar, 'nav_item':nav_item})  
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"flight_templates/flightfaq_table.html",{'k3': k3,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})  
 
 
 def flights(request):
@@ -315,7 +316,8 @@ def WhyChoose_home(request):
         k = choosing_content.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"flight_templates/whychoose_table.html",{'k': k,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"flight_templates/whychoose_table.html",{'k': k,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
 
 

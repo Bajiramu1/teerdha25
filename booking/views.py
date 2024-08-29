@@ -156,7 +156,8 @@ def flight_offertb(request):
         up=flights_offerscrudoperations.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/flight_offersupdate.html",{'up':up,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/flight_offersupdate.html",{'up':up,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 def flight2ndpage_insertform(request):
     if request.method == "POST":
@@ -182,7 +183,8 @@ def flight_2ndpages(request):
         upt=flights_2ndpages.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/flight_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/flight_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 
 def flight2ndpage_updateform(request):

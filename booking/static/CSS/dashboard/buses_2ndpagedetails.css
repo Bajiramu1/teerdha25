@@ -27,13 +27,13 @@ body.dark td a{
     color: whitesmoke;
   }   
 table {
-    width: 950px;
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 10px;
     margin: 0 auto;
-    margin-left: 300px; /* Adjusted margin-left for centering */
+    /* margin-left: 300px; Adjusted margin-left for centering */
     margin-top: 20px; /* Added margin-top for spacing */
     height: 300px;
 }
@@ -64,7 +64,7 @@ tr:last-child td {
 
       
 .sr{
-    padding-left: 300px;
+    /* padding-left: 300px; */
 }
 .url{
     text-decoration: none;
@@ -73,7 +73,7 @@ tr:last-child td {
 
 
 .sr{
-    padding-left: 300px;
+    /* padding-left: 300px; */
     margin: 20px; 
     font-size: 32px; 
     color: black; 
@@ -91,14 +91,14 @@ color: #fff;
 display: flex;
 font-weight: bold;
 padding: 10px 15px;
-margin-left: 990px;
+/* margin-left: 990px; */
 border: 2px solid #67b768;
 cursor: pointer;
    
 }
 body.dark .styled-button {
     width: 260px;
-    margin-left: 990px;
+    /* margin-left: 990px; */
     padding: 10px;
     border:2px solid #fff; 
     background-color: black;

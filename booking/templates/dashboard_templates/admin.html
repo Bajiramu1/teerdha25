@@ -8,7 +8,7 @@
     
     <!----======== CSS ======== -->
 
-    <link rel="stylesheet" href="{% static 'CSS/dashboard/admin.css' %}">
+    
 
     
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+    <link rel="stylesheet" href="{% static 'CSS/dashboard/admin.css' %}">
     <title>Admin Dashboard Panel</title> 
     
     
@@ -44,6 +46,7 @@
      
 </head>
 <body>
+
     <nav>
 
         <div class="logo-name">
@@ -180,7 +183,7 @@
 </script>
 
 
-{% block main_content %}
+
 <section class="dashboard">
     <div class="top">
         <i class="uil uil-bars sidebar-toggle"></i>
@@ -192,7 +195,7 @@
         
         <div class="dropdown">
             <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="{{profile.image.url}}" alt="Profile Picture" class="profile-picture" id="profile-picture"></i>&nbsp;{{user.username}}
+                <img src="{{profile.image.url}}" alt="Profile Pic" class="profile-picture" id="profile-picture"></i>&nbsp;{{user.username}}
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" id="profile-btn" href="#"><i class="bi bi-gear"></i> My Profile</a></li>
@@ -203,7 +206,7 @@
         </div>
         
     </div>
-
+    {% block main_content %}
     <div class="dash-content">
         <div class="overview">
             <div class="title">

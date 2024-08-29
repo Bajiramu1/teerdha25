@@ -9,13 +9,15 @@ body {
 }
 
 .jk {
-    width: calc(100% - 250px) !important;
+    /* width: calc(100% - 250px) !important; */
     align-items: first baseline;
 }
-
+.d-flex{
+    justify-content: space-between;
+}
 /* Heading styling */
 h3.sr {
-    margin: 100px 0px 10px 340px; 
+    /* margin: 100px 0px 10px 340px;  */
     font-size: 32px; 
     color: black; 
     font-weight: bold;
@@ -76,7 +78,7 @@ body.dark .vk {
 
 /* Table styling */
 table {
-    width: 74%;
+    width: 100%;
     background: #fff;
     border-radius: 10px;
     margin: 20px 0px;
@@ -136,6 +138,6 @@ body.dark td a i {
 }
 
 body.dark a {
-    background-color: black;
+    /* background-color: black; */
     color: #fff;
 }

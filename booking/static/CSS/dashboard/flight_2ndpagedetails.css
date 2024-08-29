@@ -7,13 +7,13 @@
         }
 
         table {
-            width: 80%; /* Make table responsive */
+            width: 100%; /* Make table responsive */
             max-width: 950px; /* Limit maximum width */
             border-collapse: collapse;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             background: #fff;
             border-radius: 10px;
-            margin: 50px 0px 0px 200px; 
+            margin: 30px 0px 0px 0px; 
             
         }
 
@@ -78,7 +78,7 @@
             color: #fff;
             text-decoration: none;
            padding: 10px 15px;
-            margin: 50px 0px 0px 900px; 
+            margin: 30px 0px 0px 0px; 
             font-weight: bold; 
             cursor: pointer;
         }
@@ -99,10 +99,11 @@
         /* Header style */
         .header {
             text-align:center;
-            margin-top : 750px ;
+            /* margin-top : 750px ; */
             float: left;
             margin-right: 370px
         }
         .sr{
-            margin: 100px 0px 0px auto;
+            margin: 10px 0px 50px auto;
+            width: max-content;
         }

@@ -24,10 +24,10 @@ body.dark {
      color: #cccccc;
  }  
  .tt {
-   width: 70%;
+   width: 100%;
    background: #fff;
    border-radius: 10px;
-   margin: 20px 0px 0px 300px  ;
+   /* margin: 20px 0px 0px 300px  ; */
    border: 1px solid #ddd;
  
  }
@@ -54,7 +54,7 @@ body.dark {
  }      
      
 .sr{
-   padding-left: 300px;
+   /* padding-left: 300px; */
    margin: 20px; 
    font-size: 32px; 
    color: black; 
@@ -72,7 +72,8 @@ body.dark .sr{
    display: flex;
    font-weight: bold;
    padding: 10px 15px;
-   margin-left: 1000px;
+   /* margin-left: 1000px; */
+   margin: 20px;
    border: 2px solid #67b768;
    cursor: pointer;
 

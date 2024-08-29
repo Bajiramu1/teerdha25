@@ -50,14 +50,14 @@
             }
                   
         table {
-            width: 950px;
+            width: 100%;
             border-collapse: collapse;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             background: #fff;
             border-radius: 10px;
             margin: 0;
             height: 300px;
-            margin-left: 300px;
+            /* margin-left: 300px; */
 
         }
         th, td {
@@ -80,9 +80,9 @@
             border-bottom: none;;
         }
                   
-        .sr{
+        /* .sr{
                 padding-left: 300px;
-        }
+        } */
         td a {
                     text-decoration: none;
                     display: inline-block;
@@ -105,7 +105,7 @@
 
            .styled-button {
      width: 250px;
-    margin-left: 1000px;
+    /* margin-left: 1000px; */
     padding: 10px 15px;
     border:2px solid rgb(238, 233, 233); 
     background-color: #0e8d0e9d;

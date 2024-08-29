@@ -181,7 +181,7 @@ body.dark .nav-links li a:hover .link-name{
     white-space: nowrap;
 }
 .menu-items .mode-toggle{
-    position: absolute;
+    
     right: 14px;
     height: 50px;
     min-width: 45px;
@@ -224,15 +224,15 @@ body.dark .switch:before{
     transition: var(--tran-05);
 }
 nav.close ~ .dashboard{
-    left: 73px;
-    width: calc(100% - 73px);
+    left: 65px;
+    width: calc(100% - 65px);
 }
 .dashboard .top{
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     left: 250px;
     display: flex;
-    width: calc(100% - 250px);
+    width: calc(100%);
     justify-content: space-between;
     align-items: center;
     padding: 10px 14px;
@@ -241,8 +241,8 @@ nav.close ~ .dashboard{
     z-index: 10;
 }
 nav.close ~ .dashboard .top{
-    left: 73px;
-    width: calc(100% - 73px);
+    left: 65px;
+    /* width: calc(100% - 73px); */
 }
 .dashboard .top .sidebar-toggle{
     font-size: 26px;
@@ -402,11 +402,11 @@ nav.close ~ .dashboard .top{
     }
     nav ~ .dashboard{
         left: 73px;
-        width: calc(100% - 73px);
+        /* width: calc(100% - 73px); */
     }
     nav.close ~ .dashboard{
         left: 250px;
-        width: calc(100% - 250px);
+        /* width: calc(100% - 250px); */
     }
     nav ~ .dashboard .top{
         left: 73px;
@@ -414,7 +414,7 @@ nav.close ~ .dashboard .top{
     }
     nav.close ~ .dashboard .top{
         left: 250px;
-        width: calc(100% - 250px);
+        /* width: calc(100% - 250px); */
     }
     .activity .activity-data{
         overflow-X: scroll;
@@ -461,7 +461,7 @@ nav.close ~ .dashboard .top{
     }
     nav.close ~ .dashboard{
         left: 73px;
-        width: calc(100% - 73px);
+        /* width: calc(100% - 73px); */
     }
     nav ~ .dashboard .top{
         left: 0;
@@ -480,10 +480,10 @@ nav.close ~ .dashboard .top{
    
     
         .sidebar {
-            width: 250px;
+            /* width: 250px; */
             /* background-color: #f0f0f0;  changes*/ 
             padding: 10px;
-            position: fixed;
+            /* position: fixed; */
             height: 100%;
         }
         .sidebar ul {
@@ -506,7 +506,7 @@ nav.close ~ .dashboard .top{
         .sidebar ul li ul {
             display: none;
             list-style-type: none;
-            padding-left: 15px;
+            padding-left: 35px;
         }
         .sidebar ul li.active ul {
             display: block;
@@ -518,6 +518,7 @@ nav.close ~ .dashboard .top{
     padding: 10px; /* Adjust padding as needed */
     font-size: small;
     color: var(--black-light-color);
+    background-color: var(--panel-color);
 }
 
 .sidebar .nav-item.parent a i {

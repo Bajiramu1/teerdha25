@@ -1,12 +1,12 @@
          
 table {
-    width: 950px;
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 0 20px #242526(0, 0, 0, 0.1);
     background: #fff;
     border-radius: 10px;
     margin: 0 auto;
-    margin-left: 300px; /* Adjusted margin-left for centering */
+    /* margin-left: 300px; Adjusted margin-left for centering */
     margin-top: 20px; /* Added margin-top for spacing */
     height: 300px;
 }

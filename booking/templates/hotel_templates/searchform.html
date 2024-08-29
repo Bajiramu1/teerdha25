@@ -29,17 +29,15 @@
 <body>
     <!-- <div class="container" style="justify-content: center;"> -->
         <center><form id="searchForm">{% csrf_token %}
-            
             <div class="pb-5 pt-4">
               <div class="navsearch  p-4">
                   <div class="hotel-container">
                     <div class="row justify-content-center pt-2" style="column-gap: 25px;">
-
                         <div class="row col-md-4 col-lg-3 pb-2 pt-2" >
                             <b><label class="form-label hide" for="city" ><i class="fas fa-map-marker-alt" ></i>&nbsp;&nbsp;City Name</label></b>
                             <input type="text" name="city" id="city" class="form-control" placeholder="Search city...">
                         </div>
-                        <div class="checkdetails ">
+                        <div class="checkdetails">
                         <div class="row col-md-4 col-lg-3 pt-2" style="display: flex;">
                            <b><label class="form-label hide" for="checkin"><i class="far fa-calendar-alt"></i>&nbsp;&nbsp;Check-In:</label></b>
                             <input type="text" name="checkin" id="checkin" class="form-control" placeholder="Check-In" onfocus="(this.type='date')" onblur="(this.type='text')" onchange="this.placeholder=this.value">
@@ -64,7 +62,7 @@
                                         <div class="col-6">
                                             <label>Adults <br>(>17 years)</label>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-6 add-on">
                                             <button type="button" onclick="changeValue('adults', -1)">-</button>
                                             <input type="text" id="adults" value="2" readonly>
                                             <button type="button" onclick="changeValue('adults', 1)">+</button>
@@ -74,7 +72,7 @@
                                         <div class="col-6">
                                             <label>Children <br>(≤17 years)</label>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-6 add-on">
                                             <button type="button" onclick="changeValue('children', -1)">-</button>
                                             <input type="text" id="children" value="1" readonly>
                                             <button type="button" onclick="changeValue('children', 1)">+</button>
@@ -84,7 +82,7 @@
                                         <div class="col-6">
                                             <label>Age of <br>Children</label>
                                         </div>
-                                        <div class="col-6">
+                                        <div class="col-6 add-on">
                                             <button type="button" onclick="changeValue('childAge', -1)">-</button>
                                             <input type="text" id="childAge" value="5" readonly>
                                             <button type="button" onclick="changeValue('childAge', 1)">+</button>
@@ -94,9 +92,9 @@
                                         <div class="col-6">
                                             <label>Rooms</label>
                                         </div>
-                                        <div class="col-6" style="margin-top: 10px;">
+                                        <div class="col-6 add-on" style="margin-top: 10px;">
                                             <button type="button" onclick="changeValue('rooms', -1)">-</button>
-                                            <input type="number" id="rooms" value="1" min="1" readonly>
+                                            <input type="text" id="rooms" value="1" min="1" readonly>
                                             <button type="button" onclick="changeValue('rooms', 1)">+</button>
                                         </div>
                                     </div>
@@ -112,11 +110,11 @@
                            <div class="row col-md-4 col-lg-3 pb-2 pt-2" id="pricess">
                              <b><label class="form-label hide" for="price"><i class="fas fa-money-bill-wave"></i>&nbsp;Price per Night:</label></b>
                                     <select name="price"class="form-control">
-                                        <option value="select prices">Select Prices</option>
-                                        <option value="0-1500">₹0 - ₹1500</option>
-                                        <option value="1500-2500">₹1500 - ₹2500</option>
-                                        <option value="2500-5000">₹2500 - ₹5000</option>
-                                        <option value="5000+">₹5000+</option>
+                                        <option value="select prices" class="select-prices">Select Prices</option>
+                                        <option value="0-1500" class="select-prices">₹0 - ₹1500</option>
+                                        <option value="1500-2500" class="select-prices">₹1500 - ₹2500</option>
+                                        <option value="2500-5000" class="select-prices">₹2500 - ₹5000</option>
+                                        <option value="5000+" class="select-prices">₹5000+</option>
                                     </select>
                             </div>
                         </div>
@@ -124,7 +122,7 @@
                     <div class="row justify-content-center" style="margin-left: -45px;">
 
                         <div class="col-md-3 col-lg-3 d-flex justify-content-center mt-4">
-                            <button type="button" id="search-button" class="search-button btn btn" style="width: 180px; font-size: 17px; background-color: rgb(17 22 141); border-radius: 5px; align-items: center; color: #fff;">Check Availability</button>
+                            <button type="button" id="search-button" class="search-button btn btn">Check Availability</button>
                         </div>
                         
                     </div>
@@ -137,7 +135,6 @@
         </form>
 
 </center>
-
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const dropdownContent = document.querySelector('.dropdown-content');
@@ -240,7 +237,7 @@
       </script>
       
     <center>
-      <h4>Hotel Offers</h4><br>
+      <h4 class="heading">Hotel Offers</h4><br>
 <div class="container-card" style="max-width:1160px;margin: auto;justify-items: left;padding: 20px;">
             <div class="custom-cards-container">
                 {% for i in res %}
@@ -253,7 +250,8 @@
                             <div class="title-card" id="title">{{ i.title }}</div> 
                             <div class="description-card" id="content">{{ i.content }}</div>
                         
-                            <input type="button" value="Book Now" class="btn btn-sm btn-primary w-20" style="margin-top: -30px; margin-bottom: 10px;">                        </a>
+                            <input type="button" value="Book Now" class="btn btn-sm btn-primary w-20" style="margin-top: -30px;">
+                        </a>
                     </div>
                     
                 </div>
@@ -281,7 +279,7 @@
             var cardWidth = cardContainer.find(".custom-card").outerWidth(true);
             var totalWidth = cardWidth * $(".custom-card").length;
             var animationDuration = 0; 
-            var intervalDelay = 3000; 
+            var intervalDelay = 3000000; 
             var autoScrollInterval; 
   
             function startAutoScroll() {
@@ -447,7 +445,7 @@ $(document).ready(function() {
              // Adjust for small screens (e.g., mobile devices)
              $(".custom-card").css({
                  "flex": "0 0 auto",
-                 "width": "calc(50% - 10px)"
+                 "width": "calc(100% - 10px)"
              });
              cardContainer.css();
              $(".carousel-nav").hide(); // Hide navigation buttons
@@ -486,14 +484,10 @@ $(document).ready(function() {
     </center>
       <br>
     
-    
- 
 
-
-
-      <h4 class="text-center h4 mt-4">Why you choose 'TEERDHA' for bookings?</h4><br>
+      <h4 class="text-center h4 mt-4 heading">Why you choose 'TEERDHA' for bookings?</h4><br>
       {% for i in k %}
-      <div class="container why mt-3" id="Why" style="border: 1px solid black; border-radius: 10px; padding: 20px 20px; width: 90%;"> 
+      <div class="container why mt-3" id="Why" style="border: 1px solid black; border-radius: 10px; padding: 20px; width: 90%;"> 
           <div  class="row text-left" style="margin-left: 10px; flex-direction: column;">
               <p id="op"><b>{{ i.ques }}</b></p>
               {% if forloop.counter == 12 %}
@@ -506,7 +500,7 @@ $(document).ready(function() {
       {% endfor %}
 
   <br>
-        <center><h4  class="text-center h4 mt-5">Hotel FAQ's</h4></center><br><br>
+        <center><h4  class="text-center h4 mt-5 heading">Hotel FAQ's</h4></center><br><br>
 
 
       
@@ -516,7 +510,7 @@ $(document).ready(function() {
             {% if k1 %}
             {% for faq_item in k1 %}
           
-                <div class="accordion-item">
+                <div class="accordion-item" style="overflow-wrap: break-word;">
                 
                     <div class="accordion-header" onclick="toggleAccordion('{{ faq_item.id }}')">
                         {{ faq_item.question }}

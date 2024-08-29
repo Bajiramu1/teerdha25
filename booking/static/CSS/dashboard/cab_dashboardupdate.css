@@ -10,12 +10,12 @@
                 
             }
             .jk{
-                width: calc(100%-250px) !important;
+                width: calc(100%) !important;
                 align-items: first baseline;
             }
             /* Heading styling */
              h3.sr {
-                margin: 20px 0px 10px 340px; 
+                /* margin: 20px 0px 10px 340px;  */
                 font-size: 32px; 
                 color: black; 
                 font-weight: bold;
@@ -23,7 +23,9 @@
             body.dark h3{
                 color: white;
             }
-          
+          .d-flex{
+            justify-content: space-between;
+          }
             /* Button styles */
             .hk {
          
@@ -82,7 +84,7 @@
     
             /* Table styling */
             table {
-                width: 60%;
+                width: 100%;
                 background: #fff;
                 border-radius: 10px;
                 margin: 20px 0px  ;

@@ -98,7 +98,7 @@ width: 350px;
 
 .flight-card{
     height: 260px;
-    margin-right: 100px;
+    /* margin-right: 100px; */
     width: 250px;
     
     
@@ -132,7 +132,7 @@ li{
     height: 230px;
 }
 .container{
-    width: 350px;
+    width: 100%;
     border-radius: 15px;
    
 }
@@ -162,8 +162,21 @@ li{
             text-decoration: none; /* Remove underline */
         }
   
-
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 1000px){
+        
+        .custom-container{
+            flex-wrap: wrap;
+        }
+        .flight-card{
+            flex: 1 0 250px;
+            min-width: 250px;
+            max-width: 400px;
+        }
+        #img{
+            width: 320px;
+        }
+    }
+    @media only screen and (max-width: 767px) {
     .custom-container {
         display: block; /* Change from flex to block */
         margin-left: auto; /* Center align if needed */
@@ -249,6 +262,7 @@ li{
     #img {
         height: auto;
         max-height: 200px; 
+        width: 260px;
     }
     .cont{
         font-size: 14px;
