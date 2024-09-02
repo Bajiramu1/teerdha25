@@ -125,3 +125,11 @@
                 width: 90%;
             }
         }
+        @media (min-width:768px) and (max-width:1114px) {
+            .offer-point{
+                font-size: 26px;
+            }
+            .offer-heading1{
+                font-size: 28px;
+            }
+        }

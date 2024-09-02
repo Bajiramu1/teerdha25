@@ -97,7 +97,7 @@ button:hover {
     transition: background-color 0.3s ease;
     position: absolute;
     top: 90%;
-    left: 50%;
+    left: 47%;
     transform: translate(-50%, -50%);
 }
 .more-info-link:hover {
@@ -122,5 +122,13 @@ button:hover {
     }
     .container1 {
         width: 90%;
+    }
+}
+@media (min-width:768px) and (max-width:1114px) {
+    .offer-point{
+        font-size: 26px;
+    }
+    .offer-heading1{
+        font-size: 28px;
     }
 }

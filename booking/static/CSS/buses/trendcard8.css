@@ -71,12 +71,13 @@
             color: maroon;
             margin-bottom: 10px;
             font-weight:bold;
-            margin-top: -10px;
+            margin-top: 17px;
         }
         .offer-point {
             font-size: 20px;
             color: #141414;
             margin-bottom:1px;
+            margin-top: -8px;
         }
         #img {
             max-height: auto;
@@ -96,7 +97,7 @@
             transition: background-color 0.3s ease;
             position: absolute;
             top: 90%;
-            left: 40%;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
         .more-info-link:hover {
@@ -140,4 +141,12 @@
 
         h3 {
             color: darkmagenta;
+        }
+        @media (min-width:768px) and (max-width:1114px) {
+            .offer-point{
+                font-size: 26px;
+            }
+            .offer-heading{
+                font-size: 28px;
+            }
         }

@@ -95,7 +95,7 @@
             transition: background-color 0.3s ease;
             position: absolute;
             top: 80%;
-            left: 52%;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
         .more-info-link:hover {
@@ -122,3 +122,11 @@
                 width: 90%;
             }
         }
+        @media (min-width:768px) and (max-width:1114px) {
+            .offer-title{
+                font-size: 26px;
+            }
+            .offer-heading{
+                font-size: 28px;
+            }
+        }        

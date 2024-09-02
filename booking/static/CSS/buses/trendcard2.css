@@ -24,9 +24,10 @@ body {
 .offer-title {
     color: rgb(199, 8, 126);
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 10px;
     text-align: center;
+    margin-bottom: 15px;
 }
 .offer-point {
     font-size: 20px;
@@ -117,4 +118,15 @@ body {
         border-radius: 10px;
     }
     
+}
+@media (min-width:768px) and (max-width:1114px) {
+    .offer-point{
+        font-size: 26px;
+    }
+    .offer-title{
+        font-size: 28px;
+    }
+    .card-content > div {
+        font-size: 20px;
+    }
 }
