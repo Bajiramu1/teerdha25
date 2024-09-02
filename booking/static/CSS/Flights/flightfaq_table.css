@@ -33,9 +33,9 @@ tr:last-child td {
     border-bottom: none;
 }
       
-.sr{
-    /* padding-left: 300px; */
-}
+/* .sr{
+    padding-left: 300px;
+} */
 
 td a.url {
     text-decoration: none;
