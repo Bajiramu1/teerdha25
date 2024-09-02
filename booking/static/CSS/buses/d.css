@@ -15,7 +15,11 @@
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
            
         }
-
+        p{
+            overflow-wrap: anywhere;
+            text-align: justify;
+            
+            }
         .search-inputs {
             min-height: 150px;
             display: flex;

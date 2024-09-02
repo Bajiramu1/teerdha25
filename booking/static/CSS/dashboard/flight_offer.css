@@ -4,16 +4,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: max-content;
+    /* height: max-content; */
     width: 100%;
 
 }
 .container {
-    max-width: 500px;
+    /* max-width: 500px; */
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.modal{
+    top:50%;
+    left:50%;
 }
 .form-group label {
     font-weight: bold;

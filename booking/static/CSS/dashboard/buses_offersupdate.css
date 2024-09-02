@@ -17,6 +17,8 @@ body {
 /* Heading styling */
 .sr {
     /* margin-left: 340px;  */
+    width: fit-content;
+    margin: auto;
     font-size: 32px; 
     color: black; 
     font-weight: bold;

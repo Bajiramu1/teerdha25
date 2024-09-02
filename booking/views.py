@@ -231,7 +231,8 @@ def buses_offertb(request):
         op=buses_offerscrudoperations.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/buses_offersupdate.html",{'op':op,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/buses_offersupdate.html",{'op':op,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 
 def buses2ndpage_insertform(request):
@@ -250,7 +251,8 @@ def bus_2ndpages(request):
         upt=buses_2ndpages.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/buses_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/buses_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 
           ###       Cabs  dashboard   ######
@@ -276,7 +278,8 @@ def cabs_table_dashboard(request):
         up=cabs_offerscrud_dashboard.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/cab_dashboardupdate.html",{'up':up,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/cab_dashboardupdate.html",{'up':up,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
    
 
 #####           2nd pages           ######
@@ -308,7 +311,8 @@ def cabs_table_2ndpagedb(request):
         up = cabs_secondpage_dashboard.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request, "dashboard_templates/cab_dashboard2ndpage.html", {'up': up,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request, "dashboard_templates/cab_dashboard2ndpage.html", {'up': up,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 
 
@@ -335,7 +339,8 @@ def hotels_offertb(request):
         pt=hotels_offerscrudoperations.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/hotels_offersupdate.html",{'pt':pt,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/hotels_offersupdate.html",{'pt':pt,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
    
 def hotel2ndpage_insertform(request):
@@ -362,7 +367,8 @@ def hotel_2ndpages(request):
         upt=hotels_2ndpages.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"dashboard_templates/hotel_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"dashboard_templates/hotel_2ndpagedetails.html",{'upt':upt,'Sidebar':Sidebar,'nav_item':nav_item, 'profile':profile})
 
 
 ####  dashboard  sidebar   #####

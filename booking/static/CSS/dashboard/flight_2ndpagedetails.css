@@ -98,12 +98,15 @@
 
         /* Header style */
         .header {
+            display: flex;
+            justify-content: center;
+            width: 100%;
             text-align:center;
             /* margin-top : 750px ; */
             float: left;
-            margin-right: 370px
+            /* margin-right: 370px */
         }
         .sr{
-            margin: 10px 0px 50px auto;
+            margin: auto;
             width: max-content;
         }

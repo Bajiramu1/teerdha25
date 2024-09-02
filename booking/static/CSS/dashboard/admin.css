@@ -27,12 +27,19 @@
     --tran-03: all 0.2s ease;
 }
 
+.insbtn{
+    display: flex; justify-content: flex-end; width: 100%; margin-bottom: 20px;
+}
+.dashcontainer{
+    width: 100%; max-width: 950px; margin: auto;
+}
 body{
     min-height: 100vh;
     /* background-color: var(--primary-color); */
 }
 td{
     overflow-wrap: anywhere;
+    min-width: 100px;
 }
 
 body.dark .sidebar ul li a:hover {
@@ -87,6 +94,7 @@ nav{
 nav.close{
     width: 73px;
     margin-top: -10px;
+    position: fixed;
 }
 nav .logo-name{
     display: flex;

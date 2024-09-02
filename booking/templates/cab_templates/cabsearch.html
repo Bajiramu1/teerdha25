@@ -248,6 +248,9 @@
     
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
+      $(window).on("resize", function() {
+        $('.carousel-container').scrollLeft(0);
+    });
         $(document).ready(function () {
             var scrollInterval;
             var cardWidth = $('.custom-card').outerWidth(true); 
@@ -256,8 +259,11 @@
             $('.carousel-container').append(clonedCards);
 
             function startScrolling() {
+               
                 if (!scrollInterval) {
                     scrollInterval = setInterval(function () {
+                      
+                      var cardWidth = $('.custom-card').outerWidth(true);
                         $('.carousel-container').animate({
                             scrollLeft: '+=' + cardWidth
                         }, 'slow', function () {
@@ -268,6 +274,7 @@
                     }, 4000); 
                 }
             }
+
 
             function stopScrolling() {
                 clearInterval(scrollInterval);
@@ -331,7 +338,7 @@
 <div class="container">
   <div>
      <div class="custom-content-container"> {% for faq_entry in b %}
-      <h2 class="custom-h2" style="font-size: 32px; font-weight: bold; color:rgb(255, 94, 35); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ faq_entry.content }}</h2>
+      <h2 class="custom-h2" style="font-size: 32px; font-weight: bold; color:#700398; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{ faq_entry.content }}</h2>
     {% endfor %}
   </div><br>
     

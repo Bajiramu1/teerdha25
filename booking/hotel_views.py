@@ -325,7 +325,8 @@ def hotel_cardstb(request):
         k=hotel_quary.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"hotel_templates/tb.html",{'k':k,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"hotel_templates/tb.html",{'k':k,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
 def hotel_cardsup(request,id):
     if request.method=="POST":
@@ -372,7 +373,8 @@ def hotel_faqtab(request):
         k1=hotel_faqitem.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"hotel_templates/faqdata.html",{'k1':k1,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"hotel_templates/faqdata.html",{'k1':k1,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
 def hotel_faqedit(request,id):
     if request.method=="GET":

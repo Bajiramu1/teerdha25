@@ -88,7 +88,8 @@ def bus_whychoose_op(request):
         k2=bus_whychoose.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"bus_templates/whychoose_del.html",{'k2': k2,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"bus_templates/whychoose_del.html",{'k2': k2,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
        
 ############ teerdha faq  #################
@@ -155,7 +156,8 @@ def bus_faq_op(request):
         k1=bus_faq.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"bus_templates/faq_del.html",{'k1':k1,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"bus_templates/faq_del.html",{'k1':k1,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
 ############  card1  ###############
 

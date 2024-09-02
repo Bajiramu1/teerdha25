@@ -54,6 +54,9 @@
         .highlight-card {
             background-color: #cc6600;
             color: #fff;
+            margin:auto;
+            width: fit-content;
+            max-width: 98%;
             
         }
         .highlight-card .cab-card-title {

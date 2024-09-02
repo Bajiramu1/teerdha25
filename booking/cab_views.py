@@ -242,7 +242,8 @@ def cabs_whychoose(request):
         k3 = cabwhycontents.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request,"cab_templates/WhyChoose_table1.html",{'k3': k3,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request,"cab_templates/WhyChoose_table1.html",{'k3': k3,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})
 
 
 
@@ -301,4 +302,5 @@ def cabfaq_home(request):
         b = cab_faq.objects.all()
         Sidebar=sidebar_dashboard.objects.all()
         nav_item=navbar.objects.all()
-    return render(request, "cab_templates/cabfaqdelete.html",{'b': b,'Sidebar':Sidebar, 'nav_item':nav_item})
+        profile = Profiles.objects.get(user=request.user)
+    return render(request, "cab_templates/cabfaqdelete.html",{'b': b,'Sidebar':Sidebar, 'nav_item':nav_item, 'profile':profile})

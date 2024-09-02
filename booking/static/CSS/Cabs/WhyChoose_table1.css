@@ -82,9 +82,11 @@
                   border-bottom: none;
               }
      
-        /* .sk{
-            padding-left: 300px;
-        } */
+        .sk{
+            /* padding-left: 300px; */
+            width: fit-content;
+            margin: auto;
+        }
         td a {
                     text-decoration: none;
                     display: inline-block;

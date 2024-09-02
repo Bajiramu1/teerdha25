@@ -16,6 +16,9 @@
             /* Heading styling */
              h3.sr {
                 /* margin: 20px 0px 10px 340px;  */
+                width: fit-content;
+                margin: auto;
+                margin-bottom: 30px;
                 font-size: 32px; 
                 color: black; 
                 font-weight: bold;
@@ -63,7 +66,7 @@
                 display: flex;
                 font-weight: bold;
                 padding: 10px 15px;
-                margin-left: 368px;
+                /* margin-left: 368px; */
                 border: 2px solid #67b768;
                 cursor: pointer;
 

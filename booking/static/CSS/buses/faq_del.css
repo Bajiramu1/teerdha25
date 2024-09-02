@@ -81,9 +81,10 @@ table {
             border-bottom: none;;
         }
                   
-        /* .sr{
-                padding-left: 300px;
-        } */
+        .sr{
+                width: fit-content;
+                margin: auto;
+        }
         td a {
                     text-decoration: none;
                     display: inline-block;
