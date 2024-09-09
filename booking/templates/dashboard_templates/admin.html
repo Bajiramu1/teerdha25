@@ -206,7 +206,26 @@
         </div>
         
     </div>
+        {% if messages %}
+        {% for message in messages %}
+        {% if message.tags %}
+        <div id="messege">
+            <p id="mess">{{ message }}</p>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
     {% block main_content %}
+    <script>
+        const messege=document.getElementById('messege');
+        
+        setTimeout(()=>{
+            messege.style.opacity='0';
+        },3000);
+        setTimeout(()=>{
+            messege.style.display='none';   
+        },6000)
+    </script>
     <div class="dash-content">
         <div class="overview">
             <div class="title">
@@ -241,29 +260,29 @@
 
 
  <!-- Overlay -->
- <div class="modal-overlay" id="modal-overlay" style="display: none;"></div>
+ <div class="custom-overlay" id="custom-overlay" style="display: none;"></div>
 
  <!-- Update Profile Modal -->
- <div class="modal" id="updateProfileModal" style="display: none;">
-     <div class="modal-dialog modal-lg">
-         <div class="modal-content">
-            <div class="container"><br><br>
+ <div class="custom-modal" id="updateProfileModal" style="display: none;">
+     <div class="custom-dialog custom-lg-dailog">
+         <div class="custom-content">
+            <div class="modal-container"><br><br>
 
                 <div class="d-flex align-items-start">
-                    <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <div class="nav flex-column nav-pills me-3" id="custom-tab" role="tablist" aria-orientation="vertical">
                         <button class="nav-link active" id="profile-tab" data-bs-toggle="pill" data-bs-target="#profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true">My Profile</button>
                         <button class="nav-link" id="password-tab" data-bs-toggle="pill" data-bs-target="#v-pills-password" type="button" role="tab" aria-controls="v-pills-password" aria-selected="false">Reset password</button>
                         <button class="nav-link" id="v-pills-logout-tab" data-bs-toggle="pill" data-bs-target="#v-pills-logout" type="button" role="tab" aria-controls="v-pills-logout" aria-selected="false">Logout</button>
                     </div>
             
-                    <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-content" id="custom-tabContent">
                         <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                             <div class="profile-container" id="profile-container" >
                                 <img src="{{profile.image.url}}" alt="Profile Picture" class="profile-picture" id="profile-picture" style="width: 125px; height: 125px;"><br><br>
             
-                                <h5 class="ree">Name: {{ profile.user.username }} </h5>
-                                <p class="yogesh">Email: {{ profile.email }} </p>
-                                <p class="reecha">Mob no: {{ profile.mobile_number }} </p><br>
+                                <h5 class="profile-name">Name: {{ profile.user.username }} </h5>
+                                <p class="profile-email">Email: {{ profile.email }} </p>
+                                <p class="profile-mobile">Mob no: {{ profile.mobile_number }} </p><br>
                                 <button class="btn btn-primary" id="update-profile-btn" type="button">Update Profile</button>
                             </div>
                         </div>
@@ -295,7 +314,7 @@
 
                         </div>
                         <div class="tab-pane fade" id="v-pills-logout" role="tabpanel" aria-labelledby="v-pills-logout-tab">
-                            <a class="dropdown-item" id="logout" href="javascript:void(0);" onclick="confirmLogout()"><i class="bi bi-box-arrow-right"></i>Click here to logout</a></li>
+                            <a class="dropdown-item" id="logout" href="javascript:void(0);" onclick="confirmLogout()"><i class="bi bi-box-arrow-right"></i> Click here to logout</a>
 
                         </div>
                     </div>
@@ -347,11 +366,36 @@ modeToggle.addEventListener("click", () =>{
     }
 });
 
-sidebarToggle.addEventListener("click", () => {
-    sidebar.classList.toggle("close");
+const nav= document.querySelector('nav');
+
+function ae(e) {
+    if(sidebar.classList.contains("close")){
+        sidebar.classList.remove("close");
+        localStorage.setItem("status", "open");
+    }else{
+        localStorage.setItem("status", "close");
+    }
+}
+function de(et){
     if(sidebar.classList.contains("close")){
         localStorage.setItem("status", "close");
     }else{
+        sidebar.classList.add("close");
+        localStorage.setItem("status", "open");
+    }
+}
+nav.addEventListener('mouseover',ae);
+nav.addEventListener('mouseout',de);
+sidebarToggle.addEventListener("click", () => {
+
+    sidebar.classList.toggle("close");
+    if(sidebar.classList.contains("close")){
+        nav.addEventListener('mouseover',ae);
+        nav.addEventListener('mouseout',de);
+        localStorage.setItem("status", "close");
+    }else{
+        nav.removeEventListener('mouseover',ae);
+        nav.removeEventListener('mouseout',de);
         localStorage.setItem("status", "open");
     }
 })
@@ -360,12 +404,12 @@ sidebarToggle.addEventListener("click", () => {
 <script>
     // Get the modal and overlay
     var modal = document.getElementById('updateProfileModal');
-    var overlay = document.getElementById('modal-overlay');
+    var overlay = document.getElementById('custom-overlay');
     
     // Get the button that opens the modal
     var btn = document.getElementById('profile-btn');
     var pbtn = document.getElementById('resetpassword');
-    var lbtn = document.getElementById('logoutt');
+    var lbtn = document.getElementById('logout');
 
 
     var password_tab=document.getElementById('password-tab');
@@ -379,7 +423,7 @@ sidebarToggle.addEventListener("click", () => {
     var all_tabs=document.querySelectorAll('#password-tab','#profile-tab','#manage-tab');
     var all_v=document.querySelectorAll('#profile','#v-pills-password','#v-pills-manage');
     // Get the buttons that close the modal
-    var closeBtns = document.querySelectorAll('#close-modal-btn, #modal-overlay');
+    var closeBtns = document.querySelectorAll('#close-modal-btn, #custom-overlay');
     
     // When the user clicks the button, open the modal and overlay
     
@@ -434,6 +478,15 @@ sidebarToggle.addEventListener("click", () => {
     });
 
     // When the user clicks anywhere outside of the modal, close it
+    document.querySelectorAll('.overlay').forEach(function(evt) {
+        evt.addEventListener('click',(ev2)=>{
+            document.querySelectorAll('.popup').forEach(function(pop){
+                pop.style.display='none';
+            })
+            evt.style.display='none';
+            console.log('sucess')
+        })
+    });
     window.onclick = function(event) {
         if (event.target == overlay) {
             modal.style.display = 'none';
@@ -447,7 +500,7 @@ sidebarToggle.addEventListener("click", () => {
         const profileContainer = document.getElementById('profile-container');
         profileContainer.innerHTML = `
             <div class="card user-card-full" id="update-container" >
-                 <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+                 <form action='{% url "dashboard" %}' method="post" enctype="multipart/form-data"> {% csrf_token %}
                 <div class="row m-l-0 m-r-0">
                     <div class="col-sm-4 bg-c-lite-green user-profile">
                         <div class="card-block text-center text-white">

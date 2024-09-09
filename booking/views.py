@@ -6,7 +6,7 @@ from .serialization import TaxiFareSerializer,Navigationdata,Carouseldata
 from rest_framework.mixins import ListModelMixin,CreateModelMixin,RetrieveModelMixin,UpdateModelMixin,DestroyModelMixin
 from rest_framework.generics import GenericAPIView
 from django.http import HttpResponse
-
+from django.contrib import messages
 import requests
 from .models import *
 from rest_framework.decorators import api_view
@@ -487,6 +487,7 @@ def dashboard(request):
         if mobile:
             user_profile.mobile_number=mobile
         user_profile.save()
+        messages.add_message(request, messages.SUCCESS, "data saved")
         
 
     Sidebar=sidebar_dashboard.objects.all()
@@ -541,7 +542,7 @@ def update_profile(request):
         #     'mobile_number': profile.mobile_number
         # }
         # return JsonResponse(response_data)
-    
+        
     return render(request, 'dashboard_templates/user_profile.html', {'profile': profile})  
 
 
