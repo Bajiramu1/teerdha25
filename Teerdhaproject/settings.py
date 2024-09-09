@@ -146,4 +146,4 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = 'developtrees1@gmail.com'
 EMAIL_HOST_PASSWORD = 'qvwqbjcxpvaysbjk'
 
-API_URL='http://127.0.0.1:5000'
+API_URL='http://127.0.0.1:8000'
