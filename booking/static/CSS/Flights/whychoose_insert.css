@@ -79,16 +79,4 @@
     max-width: 700px;
     max-height: 500px;
 }
-.modal {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #fff;
-    border-radius: 0.5rem;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); */
-    z-index: 1050; /* Above the overlay */
-    max-width: 700px;
-    max-height: 500px;
-    overflow: auto;
-}
+

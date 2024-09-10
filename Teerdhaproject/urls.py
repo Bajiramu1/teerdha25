@@ -22,6 +22,9 @@ from booking import views,hotel_views,flight_views,bus_views,cab_views
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 
+from django.urls import re_path
+from django.views.static import serve
+
 
 
 
@@ -31,7 +34,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('teerdha_page',views.teerdha_page),
 
-
+    # your other paths here
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root': settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}),
     # path('reset_password/', auth_views.PasswordResetView.as_view(), name='password_reset'),
     # path('reset_password/done/', auth_views.PasswordResetDoneView.as_view(), name='password_reset_done'),
     # path('reset/<uidb64>/<token>/', auth_views.PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
