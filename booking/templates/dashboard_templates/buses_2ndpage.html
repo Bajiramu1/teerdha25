@@ -20,22 +20,46 @@
 
     <div class="popup" id="offerPopup">
     <label for="offerPopup" class="close" onclick="BusClosePopup()">&times;</label>
-
+    <center>
+        <h5 style="color: rgb(153, 125, 25)">New Offer Insert Form</h5>
+      </center>
     <div class="container">
         <form method="post">{% csrf_token %}
-            <div class="form_group">
-               <label>Buses_offer</label>
-               <input type="text" name="offer" >
+            <div class="user-details">
+            <div class="input-box">
+              <span class="details">Flight Offer: </span>
+              <input
+                type="text"
+                name="offer"
+                placeholder="Enter your offer"
+                required
+              />
             </div>
-            <div class="form_group">
-               <label>insert_url</label>
-               <input type="text" name="inserturl" >
+            <br />
+            <div class="input-box">
+              <span class="details">Insert URL: </span>
+              <input
+                type="text"
+                name="inserturl"
+                placeholder="//Enter URL here//"
+                required
+              />
             </div>
-            <div class="form_group">
-                <label>update_url</label>
-                <input type="text" name="updateurl" >
-             </div>
-            <input type="submit" class="btn btn-primary">
+            <br />
+            <div class="input-box">
+              <span class="details">Update URL: </span>
+              <input
+                type="text"
+                name="updateurl"
+                placeholder="//Enter URL here//"
+                required
+              />
+            </div>
+          </div>
+          <br />
+          <div class="button">
+            <input type="submit" value="Submit" />
+          </div>
            </form>
     </div>
     </body>

@@ -35,14 +35,14 @@
 /* Styling for the pop-up box */
 .popup {
     display: none; /* Initially hidden */
-    background-color: #ffff;
-    padding: 5px;
+    background-color: #c0e2d1;
+    padding: 40px;
     margin: 20px;
     margin-bottom: 10px;
-    width: 400px;
-    position: absolute;
-    top: 30%;
-    left: 60%;
+    width: 492px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border-radius: 10px;

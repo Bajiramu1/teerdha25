@@ -28,7 +28,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 30px 0 13px 0;
+    margin: 30px 0 65px 0;
     color: #fff200;
     font-style: 'Roboto';
     font-size:22px;
@@ -109,7 +109,12 @@ height: 100%;
 background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
 z-index: 1;
 }
-        
+#offer{
+    width: 70%;
+} 
+#url{
+    width: 70%;
+}   
 /* Styling for the pop-up box */
 .popup {
 display: none; /* Initially hidden */
@@ -117,7 +122,7 @@ background-color: #ffff;
 padding: 5px;
 margin-bottom: 10px;
 width: 500px;
-position: absolute;
+position: fixed;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);

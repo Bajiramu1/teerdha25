@@ -965,4 +965,13 @@
             background-color: #000;
             border: 1px solid #fff;
           }
-         
+          .offer-heading {
+            color: #23990f; /* Use a warmer golden color */
+            font-size: 1.5em; /* Increase font size for better readability */
+            font-weight: 600; /* Make the font semi-bold for emphasis */
+            text-align: center; /* Center the heading */
+            margin-bottom: 20px; /* Add space below the heading */
+            font-family: 'Arial', sans-serif; /* Choose a modern, clean font */
+            letter-spacing: 1px; /* Add some letter spacing for a cleaner look */
+        }
+        

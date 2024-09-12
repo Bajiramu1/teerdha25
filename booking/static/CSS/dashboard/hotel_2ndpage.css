@@ -44,27 +44,28 @@ z-index: 1;
 }
 
 .popup {
-display: none;
-background-color: #fff;
-padding: 20px 40px;
-border-radius: 10px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-width: 600px;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 1;
-color: #000;
+    display: none;
+    background-color: #c0e2d1;
+    padding: 20px;
+    width: 40%;
+    /* max-width: 500px; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 2;
+    /* height: 292px; */
 }
 
-.popup label.close {
-position: absolute;
-top: 10px;
-right: 15px;
-cursor: pointer;
-font-size: 25px;
-color: #000;
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #1b1919;
 }
 
 .popup .container {

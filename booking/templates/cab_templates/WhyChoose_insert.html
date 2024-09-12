@@ -20,7 +20,7 @@
     <label for="whychoosePopup" class="close" onclick="CabClosePopup()">&times;</label>
     <center>
 
-        <br><h5 style="color: rgb(153, 125, 25);">Cabs whychoose insert form</h5>
+        <br><h5 style="color: #23990f;">Cabs whychoose insert form</h5>
 
 
     <form method="post" enctype="multipart/form-data">{% csrf_token %}
@@ -30,9 +30,9 @@
         </div>
         <div class="form-group">
             <label for="heading1">Heading1</label>
-            <input type="text" name="heading1" id="heading1" class="form-control">
+            <textarea name="heading1" class="form-control" style="height: 70px;"></textarea>
         </div>
-        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+        <button type="submit" style="width: 81px; background-color: blue;" class="btn btn-primary">Submit</button>
     </form>
     </center>
 </body>

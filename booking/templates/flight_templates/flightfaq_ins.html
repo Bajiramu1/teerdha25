@@ -13,19 +13,19 @@
         <label for="faqPopup" class="close" onclick="flightClosePopup()">&times;</label>
     <center>
 
-            <br><h5 style="color: rgb(153, 125, 25);">Flight FAQ insert form</h5>
+            <br><h5 style="color: #23990f">Flight FAQ insert form</h5>
 
 
-        <form method="post" enctype="multipart/form-data"> {% csrf_token %}
+        <form method="post" enctype="multipart/form-data" style="width: 83%;"> {% csrf_token %}
             <div class="form-group">
-                <label>question</label>
+                <label>Question</label>
                 <input type="text" name="question" class="form-control">
             </div>
             <div class="form-group">
-                <label>answer</label>
-                <input type="text" name="answer" class="form-control">
+                <label>Answer</label>
+                <textarea name="answer" class="form-control" style="height: 70px;"></textarea>
             </div>
-            <button type="submit" class="btn">Submit</button>
+            <button type="submit" style="width: 81px; background-color: blue;" class="btn btn-primary">Submit</button>
         </form>
     </center>
 </body>

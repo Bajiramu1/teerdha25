@@ -18,18 +18,18 @@
         <label for="faqPopup" class="close" onclick="HotelClosePopup()">&times;</label>
         <center>
     
-            <br><h5 style="color: rgb(153, 125, 25);">Hotel FAQ's insert form</h5>
+            <br><h5 style="color: #23990f">Hotel FAQ's insert form</h5>
         <div class="container mt-5">
         <form method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="form-group">
-                <label>question</label>
+                <label>Question</label>
                 <input type="text"placeholder="enter your question" name="question" class="form-control" required>
             </div>
             <div class="form-group">
-                <label>answer</label>
-                <input type="text" placeholder="enter your answer" name="answer" class="form-control" required>
+                <label>Answer</label>
+                <textarea name="answer" class="form-control" style="height: 70px;"></textarea>
             </div><br>
-            <input type="submit" class="btn btn-primary btn-block">
+            <button type="submit" style="width: 81px; background-color: blue;" class="btn btn-primary">Submit</button>
         </form>
     </div>
     </body>

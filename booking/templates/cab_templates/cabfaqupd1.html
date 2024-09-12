@@ -20,23 +20,20 @@
     <label for="faqPopup" class="close" onclick="CabClosePopup()">&times;</label>
     <center>
 
-        <br><h5 style="color: rgb(153, 125, 25);">Cabs FAQ's insert form</h5>
+        <br><h5 style="color: #23990f">Cabs FAQ's insert form</h5>
 
 
     <form method="post" enctype="multipart/form-data">{% csrf_token %}
+        
         <div class="form-group">
-            <label for="content">content</label>
-            <input type="text" name="content" id="content" class="form-control">
-        </div>
-        <div class="form-group">
-            <label for="Title">Title</label>
+            <label for="Title">Question</label>
             <input type="text" name="Title" id="Title" class="form-control">
         </div>
         <div class="form-group">
-            <label for="description">Description</label>
-            <input type="text" name="description" id="description" class="form-control">
+            <label for="description">Answer</label>
+            <textarea name="description" class="form-control" style="height: 70px;"></textarea>
         </div>
-        <button type="submit" class="btn btn-danger btn-block">Submit</button>
+        <button type="submit" style="width: 81px; background-color: blue;" class="btn btn-primary">Submit</button>
     </form>
     </center>
 </body>

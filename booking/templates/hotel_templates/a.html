@@ -21,7 +21,7 @@
     <label for="whychoosePopup" class="close" onclick="HotelClosePopup()">&times;</label>
     <center>
 
-        <br><h5 style="color: rgb(153, 125, 25);">Hotels whychoose insert form</h5>
+        <br><h5 style="color: #23990f;">Hotels whychoose insert form</h5>
 
         <form method="post" enctype="multipart/form-data">{% csrf_token %}
             <div class="form-group">
@@ -30,9 +30,9 @@
             </div>
             <div class="form-group">
                 <label for="answer">Answer</label>
-                <input type="text" name="ans" class="form-control" id="answer" required>
+                <textarea name="ans" class="form-control" style="height: 70px;"></textarea>
             </div>
-            <input type="submit" class="btn btn-block btn-danger">
+            <button type="submit" style="width: 81px; background-color: blue;" class="btn btn-primary">Submit</button>
         </form>
         
     </center>
