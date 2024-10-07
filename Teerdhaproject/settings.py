@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'Teerdhaproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME':'booking_aug_06',
+        'NAME':'dj1',
         'PORT':'3306',
-        'PASSWORD':'',
-        'HOST':'localhost',
-        'USER':'root'
+        'PASSWORD':'awsuser123456',
+        'HOST':'database-1.cv2yqwa6u400.ap-south-1.rds.amazonaws.com',
+        'USER':'admin'
     }
 }
 
